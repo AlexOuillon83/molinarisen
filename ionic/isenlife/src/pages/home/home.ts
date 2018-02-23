@@ -60,9 +60,9 @@ export class HomePage {
   public onAndroid(){
     this.gyroscope.watch(this.options)
       .subscribe((orientation: GyroscopeOrientation) => {
-        console.log("orientation: ", orientation.x, orientation.y, orientation.z, orientation.timestamp);
+        console.log("orientation: ", orientation.x, orientation.y, orientation.z);
         this.orientation = orientation;
-        this.x -= orientation.y;
+        this.x += 10*orientation.y;
         this.clearCanvas();
         this.drawPlayer();
       });  
