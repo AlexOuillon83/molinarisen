@@ -32,8 +32,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private gyroscope: Gyroscope, public platform: Platform) {
 
-    this.onBrowser();
-    //this.onAndroid();
+    //this.onBrowser();
+    this.onAndroid();
   }
 
   public onBrowser(){
